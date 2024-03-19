@@ -1,0 +1,257 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'font-awesome.min.css';
+
+/* @font-face {
+    font-family: "Studio Sans DEMO";
+    src: url("../fonts/StudioSansDEMO.eot");
+    src: url("../fonts/StudioSansDEMO.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/StudioSansDEMO.woff2") format("woff2"),
+        url("../fonts/StudioSansDEMO.woff") format("woff"),
+        url("../fonts/StudioSansDEMO.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Liberation Serif";
+    src: url("../fonts/LiberationSerif-Regular.eot");
+    src: url("../fonts/LiberationSerif-Regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/LiberationSerif-Regular.woff2") format("woff2"),
+        url("../fonts/LiberationSerif-Regular.woff") format("woff"),
+        url("../fonts/LiberationSerif-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Liberation Serif";
+    src: url("../fonts/LiberationSerif-Bold.eot");
+    src: url("../fonts/LiberationSerif-Bold.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/LiberationSerif-Bold.woff2") format("woff2"),
+        url("../fonts/LiberationSerif-Bold.woff") format("woff"),
+        url("../fonts/LiberationSerif-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Studio Sans Bold";
+    src: url("../fonts/StudioSans-Bold.eot");
+    src: url("../fonts/StudioSans-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/StudioSans-Bold.woff2") format("woff2"),
+        url("../fonts/StudioSans-Bold.woff") format("woff"),
+        url("../fonts/StudioSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap');
+/*     font-family: 'Nunito', sans-serif; */
+
+@font-face {
+    font-family: 'SutonnyMJ';
+    src: url('../fonts/SutonnyMJ.eot');
+    src: url('../fonts/SutonnyMJ.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SutonnyMJ.woff2') format('woff2'),
+        url('../fonts/SutonnyMJ.woff') format('woff'),
+        url('../fonts/SutonnyMJ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+html[lang="bn"] .product_price,
+html[lang="bn"] .page_title,
+html[lang="bn"] .breadcrumb li a,
+html[lang="bn"] .langBN,
+html[lang="bn"] .search-form,
+html[lang="bn"] #header_area a {
+    font-family: 'SutonnyMJ';
+}
+
+html[lang="tr"] .product_price,
+html[lang="tr"] .page_title,
+html[lang="tr"] .breadcrumb li a,
+html[lang="tr"] .langBN,
+html[lang="tr"] .search-form,
+html[lang="tr"] #header_area a {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+html[lang="bn"] .noTranslate{
+    font-family: 'Nunito', sans-serif;
+}
+html[lang="tr"] .noTranslate{
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}.slick-list:focus{outline:0}.slick-list.dragging{cursor:pointer;cursor:hand}.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}.slick-track:after,.slick-track:before{display:table;content:''}.slick-track:after{clear:both}.slick-loading .slick-track{visibility:hidden}.slick-slide{display:none;float:left;height:100%;min-height:1px}[dir=rtl] .slick-slide{float:right}.slick-slide img{display:block}.slick-slide.slick-loading img{display:none}.slick-slide.dragging img{pointer-events:none}.slick-initialized .slick-slide{display:block}.slick-loading .slick-slide{visibility:hidden}.slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}.slick-arrow.slick-hidden{display:none}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.section-heading {
+    @apply font-bold text-center text-4xl mb-10
+}
+
+.btn {
+    @apply bg-gray-800 text-white px-6 py-2 rounded inline-block text-center
+}
+
+.fullwidth-btn {
+    @apply btn w-full
+}
+
+.sticky-header {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.sticky-header-active {
+    background-color: #fff;
+}
+
+.sticky-header-active a{color:#333}
+
+.inputField {
+    @apply w-full border-gray-400 block
+}
+
+#description h3 {}
+#description p, #description ul {margin-bottom: 20px}
+
+.general-header a {
+    color: #000;
+}
+
+.general-header {
+    background-color: #fff;
+}
+
+.single-gallery-item {
+    height: 600px;
+}
+
+.single-thumbnail-item {
+    height: 80px;
+}
+
+.otherpage .currency a{
+    color: #000;
+}
+
+
+/* property add/edit form from admin/dashboard */
+.civanoglu-label{
+    @apply uppercase text-sm text-gray-600 cursor-pointer block mb-1
+}
+.civanoglu-input{
+    @apply border border-gray-400 w-full px-4 py-2 rounded-md focus:outline-none text-base
+}
+
+.required-text{
+    @apply text-red-800 text-base ml-1
+}
+
+/* Dashboard Card */
+.dashboard-card{
+  @apply text-center py-10 bg-gradient-to-r from-green-400 to-blue-500 rounded-md text-white hover:text-white  hover:from-pink-500 hover:to-yellow-500 duration-200 relative overflow-hidden transition-all;
+}
+.dashboard-card i{
+  @apply text-4xl mb-3
+}
+
+.dashboard-card span{
+  @apply absolute -right-5 -top-5 bg-gradient-to-t from-red-500 to-yellow-500 w-20 h-20 font-bold text-xl rounded-full leading-10 pr-2 pt-6;
+}
+
+
+/* ----- CSS code for search -------- */
+.vertical-search-form > form > div {
+    display: block;
+    min-width: 100%;
+    margin-bottom: 15px;
+}
+
+.vertical-search-form > form {
+    display: block;
+}
+
+.vertical-search-form .border-gray-500 {
+    display: none;
+}
+
+.home-search label {
+    display: none;
+}
+
+.vertical-search-form label {
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: block;
+    /* opacity: .8; */
+    font-family: 'Nunito', sans-serif;
+}
+
+.vertical-search-form select {
+    min-width: 100%;
+}
+
+.vertical-search-form > form > div > div {
+    display: block;
+    min-width: 100%;
+    margin-bottom: 15px;
+}
+
+.vertical-search-form > form > div.ml-5 {
+    margin-left: 12px;
+}
+
+.vertical-search-form button {
+    margin-top: 15px;
+    min-width: 100%;
+}
+
+/* ----- CSS code for slick slider arrow buttons -------- */
+.nextArrowBtn{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 5px;
+    color: #ffffff;
+}
+.prevArrowBtn{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 5px;
+    color: #ffffff;
+}

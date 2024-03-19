@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "RustPure_backend": {
+      "candid": "src/RustPure_backend/RustPure_backend.did",
+      "package": "RustPure_backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
