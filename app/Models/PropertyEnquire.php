@@ -14,5 +14,6 @@ class PropertyEnquire extends Model
         'phone',
         'email',
         'message',
+        'canister',
     ];
 }

@@ -26,6 +26,6 @@ class EnquireEmail extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.enquire-email')->to($this->enquireData[0]['email'])->from('propertylisting@civanolo.com')->subject('Property Enquire')->with('data',$this->enquireData);
+        return $this->view('emails.enquire-email')->to($this->enquireData[0]['email'])->from('smartestatespace@enquire.com')->subject('Property Enquire')->with('data',$this->enquireData);
     }
 }

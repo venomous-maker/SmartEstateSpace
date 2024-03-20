@@ -18,6 +18,7 @@ class PropertyEnquireFactory extends Factory
             'email'  => $this->faker->email(),
             'phone'  => $this->faker->phoneNumber(),
             'message'  => $this->faker->paragraph($nbSentences = 5, $variableNbSentences = true),
+            'canister' => $this->faker->paragraph(),
         ];
     }
 }

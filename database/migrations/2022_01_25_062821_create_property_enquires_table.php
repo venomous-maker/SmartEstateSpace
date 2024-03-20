@@ -19,6 +19,7 @@ class CreatePropertyEnquiresTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->longText('message');
+            $table->longText('canister');
             $table->timestamps();
         });
     }
