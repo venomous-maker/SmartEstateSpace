@@ -9,6 +9,7 @@ use App\Mail\EnquireEmail;
 use Illuminate\Support\Facades\Mail;
 use App\Jobs\ProcessEnquireEmail;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Canister\Canister;
 
 class PropertyController extends Controller
 {
@@ -79,16 +80,19 @@ class PropertyController extends Controller
         ]);
 
         // $request->message .= '\nThis message was sent from '. route('property.show',$propertyID) . ' website.';
-
+        $canister = new Canister("http://",'localhost', '5000');
+        $property = Property::findOrFail($propertyID);
+        $canister_json = $canister->transferIcp('1','2',$property->price);
         PropertyEnquire::create([
             'name'  => $request->name,
             'phone'  => $request->phone,
             'email'  => $request->email,
             'message'  => $request->message . '\nThis message was sent from '. route('property.show',$propertyID) . ' website.',
+            'canister' => $canister_json['message'],
         ]);
 
         // Send User & Admin mail/message
-        $data = [$request->all(), 'propertyURL' => route('property.show', $propertyID)];
+        $data = [$request->all(), 'propertyURL' => route('property.show', $propertyID), 'canister' => $canister_json['message']];
 
         // Send User & Admin mail/message via Queue
         ProcessEnquireEmail::dispatch($data);

@@ -15,6 +15,7 @@
         <p><strong>Phone: </strong>{{ $data[0]['phone'] }}</p>
         <p><strong>Email: </strong>{{ $data[0]['email'] }}</p>
         <p><strong>Message: </strong>{{ $data[0]['message'] }}</p>
+        <p><strong>Canister: </strong>{{ $data['canister'] }}</p>
     </div>
 
 </div>

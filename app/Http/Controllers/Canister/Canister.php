@@ -8,15 +8,19 @@ class Canister
 {
     public $APT_URL;
     public $API_PORT;
+    public $API;
+    public $MODE;
     /*
      * @Canister
      * @Args
      *      URL
      *      PORT
      */
-    public function __construct( $APT_URL, $API_PORT){
+    public function __construct( $mode,$APT_URL, $API_PORT){
         $this->API_PORT = $API_PORT;
         $this->APT_URL = $APT_URL;
+        $this->MODE = $mode;
+        $this->API = $this->MODE.$this->APT_URL.":".$this->API_PORT;
     }
 
     public function createAccount($to, $amount) {
@@ -47,64 +51,64 @@ class Canister
     public function depositIcp($to, $amount)
     {
         if (!$to || !$amount) {
-            return ['error' => 'Missing "account_id" or "amount" parameter'];
+            return ['message' => 'Missing "account_id" or "amount" parameter'];
         }
 
         // Call dfx command to perform ICP deposit
-        $response = Http::get("http://localhost:8000/deposit_icp?to=$to&amount=$amount");
+        $response = Http::get($this->API."/deposit_icp?to=$to&amount=$amount");
 
         if ($response->successful()) {
             return $response->json();
         } else {
-            return ['error' => 'Failed to deposit ICP'];
+            return ['message' => 'Failed to deposit ICP'];
         }
     }
 
     public function withdrawIcp($to, $amount)
     {
         if (!$to || !$amount) {
-            return ['error' => 'Missing "account_id" or "amount" parameter'];
+            return ['message' => 'Missing "account_id" or "amount" parameter'];
         }
 
         // Call dfx command to perform ICP withdrawal
-        $response = Http::get("http://localhost:8000/withdraw_icp?to=$to&amount=$amount");
+        $response = Http::get($this->API."/withdraw_icp?to=$to&amount=$amount");
 
         if ($response->successful()) {
             return $response->json();
         } else {
-            return ['error' => 'Failed to withdraw ICP'];
+            return ['message' => 'Failed to withdraw ICP'];
         }
     }
 
     public function transferIcp($from, $to, $amount)
     {
         if (!$from || !$to || !$amount) {
-            return ['error' => 'Missing "from_account_id", "to_account_id", or "amount" parameter'];
+            return ['message' => 'Missing "from_account_id", "to_account_id", or "amount" parameter'];
         }
 
         // Call dfx command to perform ICP transfer
-        $response = Http::get("http://localhost:8000/transfer_icp?from=$from&to=$to&amount=$amount");
+        $response = Http::get($this->API."/transfer_icp?from=$from&to=$to&amount=$amount");
 
         if ($response->successful()) {
             return $response->json();
         } else {
-            return ['error' => 'Failed to transfer ICP'];
+            return ['message' => 'Failed to transfer ICP'];
         }
     }
 
     public function getBalance($accountId)
     {
         if (!$accountId) {
-            return ['error' => 'Missing "account_id" parameter'];
+            return ['message' => 'Missing "account_id" parameter'];
         }
 
         // Call dfx command to get account balance
-        $response = Http::get("http://localhost:8000/get_balance?account_id=$accountId");
+        $response = Http::get($this->API."/get_balance?account_id=$accountId");
 
         if ($response->successful()) {
             return $response->json();
         } else {
-            return ['error' => 'Failed to get balance'];
+            return ['message' => 'Failed to get balance'];
         }
     }
 }

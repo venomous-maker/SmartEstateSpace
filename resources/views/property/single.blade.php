@@ -251,6 +251,9 @@
                         <div class="mt-5">
                             <button type="submit" class="w-full border-2 uppercase text-center py-3 font-semibold border-red-800 hover:bg-transparent hover:text-red-800 duration-200  text-white bg-red-800 rounded-none"><i class="fa fa-commenting mr-2"></i>{{__('Request Details')}}</button>
                         </div>
+                        <div class="mt-5">
+                            <button type="submit" class="w-full border-2 uppercase text-center py-3 font-semibold border-red-800 hover:bg-transparent hover:text-red-800 duration-200  text-white bg-red-800 rounded-none"><i class="fa fa-commenting mr-2"></i>{{__('Buy')}} {{__('or')}} {{__('Rent')}}</button>
+                        </div>
 
                     </form>
                 </div>

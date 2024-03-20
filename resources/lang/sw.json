@@ -17,7 +17,7 @@
     "Location": "Eneo",
     "Locations": "Maeneo",
     "Rent": "Kodi",
-    "Sale": "Kuuza",
+    "Sale": "Uza",
     "Type": "Aina",
     "Bedrooms": "Vyumba vya kulala",
     "Bedroom": "Chumba cha kulala",
@@ -46,5 +46,8 @@
     "Language": "Lugha",
     "Here": "Hapa",
     "There": "Huko",
-    "Currency": "Sarafu"
+    "Currency": "Sarafu",
+    "Buy": "Nunua",
+    "Or":  "Au",
+    "or": "au"
 }
